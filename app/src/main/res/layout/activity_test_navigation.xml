@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/testNavigation">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout="@layout/fragment_for_test_navigation"/>
+
+    <Button
+        android:id="@+id/addFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:backgroundTint="@android:color/darker_gray"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/replaceFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Replace"
+        android:backgroundTint="@android:color/darker_gray"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/addFragment"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/addRootScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AddRoot"
+        android:backgroundTint="@android:color/darker_gray"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/replaceFragment"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/backTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BackTo"
+        android:backgroundTint="@android:color/darker_gray"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/addRootScreen"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:backgroundTint="@android:color/darker_gray"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/replaceFragment"
+        app:layout_constraintStart_toStartOf="@+id/addFragment"
+        app:layout_constraintTop_toBottomOf="@+id/replaceFragment" />
+
+    <Button
+        android:id="@+id/exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exit"
+        android:backgroundTint="@android:color/darker_gray"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/backTo"
+        app:layout_constraintStart_toEndOf="@+id/replaceFragment"
+        app:layout_constraintTop_toBottomOf="@+id/addRootScreen" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
